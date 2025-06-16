@@ -16,12 +16,24 @@ ui::~ui()
 
 }
 
-//전투B
-void ui::fight()
+
+void ui::BattleSelect()
 {
-	
-	cout << "몬스터 Hp : " << endl;
-	cout << "몬스터 Attack : " << endl;
-	cout << "내 Hp : " << endl;
-	cout << "내 Hp : " << endl;
+	while (1)
+	{
+		cin >> ui::m_nSelect;
+
+		switch (ui::m_nSelect)
+		{
+		case 1:
+			break;
+
+		case 2:
+			exit(0);
+
+		default:
+			continue;
+		}
+		break;
+	}
 }

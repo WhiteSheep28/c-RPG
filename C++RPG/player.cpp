@@ -7,7 +7,7 @@ using namespace std;
 player::player()
 {
 	player::m_nHealth = 100;
-	player::m_nAttack = 200;
+	player::m_nAttack = 10;
 }
 
 player::~player()
@@ -15,7 +15,7 @@ player::~player()
 
 }
 
-void player::CheckHp()
+void player::CheckHealth()
 {
 	cout << player::m_nHealth;
 }
@@ -23,4 +23,14 @@ void player::CheckHp()
 void player::CheckAttack()
 {
 	cout << player::m_nAttack;
+}
+
+void player::TakeDamage()
+{
+
+}
+
+void player::ToDamage()
+{
+
 }

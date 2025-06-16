@@ -7,9 +7,13 @@ public:
 	ui();
 	~ui();
 
-	void fight();
+	void BattleSelect();
 
 protected:
 
 private:
+	int m_nSelect;
+
+	friend class player;
+	friend class monster;
 };

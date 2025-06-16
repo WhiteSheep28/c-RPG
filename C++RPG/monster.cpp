@@ -15,7 +15,7 @@ monster::~monster()
 
 }
 
-void monster::CheckHp()
+void monster::CheckHealth()
 {
 	cout << monster::m_nHealth;
 }
@@ -23,4 +23,14 @@ void monster::CheckHp()
 void monster::CheckAttack()
 {
 	cout << monster::m_nAttack;
+}
+
+void monster::TakeDamage()
+{
+
+}
+
+void monster::ToDamage()
+{
+
 }
