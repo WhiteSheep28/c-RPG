@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\Character">
+      <UniqueIdentifier>{d1de8965-628c-40c6-b217-df95af1faa9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Character">
+      <UniqueIdentifier>{8a7363d4-85d7-47a0-892d-6ad17d174b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Ui">
+      <UniqueIdentifier>{2d5d8bd8-b057-4e41-9471-8467fc7a419f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Ui">
+      <UniqueIdentifier>{4ee447ef-7caf-41be-8e04-9223e6f797a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Archer.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Socerer.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonUi.cpp">
+      <Filter>소스 파일\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui.cpp">
+      <Filter>소스 파일\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TestMonster.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="FarmUi.cpp">
+      <Filter>소스 파일\Ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Archer.h">
+      <Filter>헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Socerer.h">
+      <Filter>헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui.h">
+      <Filter>헤더 파일\Ui</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonUi.h">
+      <Filter>헤더 파일\Ui</Filter>
+    </ClInclude>
+    <ClInclude Include="FarmUi.h">
+      <Filter>헤더 파일\Ui</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMonster.h">
+      <Filter>헤더 파일\Character</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

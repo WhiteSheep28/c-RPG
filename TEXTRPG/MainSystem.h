@@ -1,0 +1,114 @@
+#pragma once
+
+#include <iostream>
+#include <memory.h>
+
+using namespace std;
+
+class cMainSystem
+{
+public:
+	cMainSystem();
+	virtual ~cMainSystem();
+
+	//Ui.h
+	virtual void StartUi() { ; } //게임 시작 화면
+
+	virtual void CharacterUi() { ; } //캐릭터 선택
+
+
+	//캐릭터 소개
+	virtual void WarriorUi() { ; }
+	virtual void SocererUi() { ; }
+	virtual void ArcherUi() { ; }
+
+	virtual void MainSystemUi(cMainSystem* Character) { ; } //메인화면
+
+
+	//DungeonUi.h
+	virtual void TestDungeonUi(cMainSystem* Character, cMainSystem* Inventory) { ; }
+
+
+	//FarmUi.h
+	virtual void FarmUi(cMainSystem* Inventory) { ; }
+
+
+	//Character.h
+	virtual void ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy) { ; }
+
+	string Getm_sName() { return m_sName; }
+
+	int Getm_nHealth() { return m_nHealth; }
+	virtual void Setm_nHealth(int EnemyHealth) { ; }
+
+	int Getm_nAttack() { return m_nAttack; }
+
+	int Getm_nHungry() { return m_nHungry; }
+	virtual void Setm_nHungry(cMainSystem* Character) { ; }
+
+	int Getm_nLevel() { return m_nLevel; }
+	int Getm_nCharacterNum() { return m_nCharacterNum; }
+
+
+	//System.h
+	virtual void SelectSystem() { ; }
+
+	virtual void StartSelect() { ; } //게임 시작, 나가기
+
+	virtual void CharacterSelect() { ; } //캐릭터 선택
+
+	virtual void WarriorIntroduceSelect() { ; } //캐릭터 소개
+	virtual void SocererIntroduceSelect() { ; }
+	virtual void ArcherIntroduceSelect() { ; } 
+
+	virtual void MainSystemSelect(cMainSystem* Character, cMainSystem* Inventory) { ; } //최초 게임 시작
+	
+	virtual void BreadSelect(cMainSystem* Inventory) { ; }
+
+	virtual void InventorySelect(cMainSystem* Character) { ; }
+
+	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
+	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
+	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
+
+	
+	//Inventory.h
+	virtual void InventoryUi() { ; }
+	virtual void HealthPotionUi() { ; }
+	virtual void BreadUi() { ; }
+	virtual void HeadUi() { ; }
+
+	virtual void Setm_nBread() { ; }
+	virtual int Getm_nBread() { return m_nBread; }
+
+	virtual void Setm_nBreadCost() { ; }
+
+	int Getm_nSelect() { return m_nSelect; }
+
+protected:
+	string m_sName;
+	int m_nHealth;
+	int m_nAttack;
+	int m_nHungry;
+	int m_nLevel;
+	int m_nCharacterNum;
+
+
+	static int m_nSelect;
+
+	int m_nInventorySlot[10];
+
+	static int m_nBreadCount;
+	static int m_nBreadCost;
+
+	int m_nHealthPotionCode;
+	int m_nBreadCode;
+	int m_nHeadCode;
+
+	int m_nHealthPotion;
+	int m_nBread;
+	int m_nHead;
+
+private:
+	
+};
