@@ -74,6 +74,7 @@ public:
 	
 	//Inventory.h
 	virtual void InventoryUi() { ; }
+	virtual void InputInventory(int ItemCode, int ItemNum) { ; }
 	virtual void HealthPotionUi() { ; }
 	virtual void BreadUi() { ; }
 	virtual void HeadUi() { ; }
@@ -108,6 +109,8 @@ protected:
 	int m_nHealthPotion;
 	int m_nBread;
 	int m_nHead;
+
+	int m_nGetItemCode;
 
 private:
 	

@@ -13,6 +13,7 @@ public:
 	~cInventory();
 
 	virtual void InventoryUi();
+	virtual void InputInventory(int ItemCode, int ItemNum);
 	virtual void HealthPotionUi();
 	virtual void BreadUi();
 	virtual void HeadUi();

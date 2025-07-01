@@ -307,10 +307,7 @@ void cSystem::BreadSelect(cMainSystem* Inventory)
 
 	switch (Getm_nSelect())
 	{
-	case 1: 
-	{
-		Inventory->Setm_nBreadCost();
-	}
+	case 1: break;
 	case 2: break;
 	default: break;
 	}

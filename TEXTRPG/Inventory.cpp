@@ -26,6 +26,42 @@ cInventory::~cInventory()
 
 }
 
+void cInventory::InputInventory(int ItemCode,int ItemNum)
+{
+	int nCount = 0;
+	int nInputCount = 0;
+
+	while (nCount <= 10)
+	{
+		if (m_nInventorySlot[nCount] == ItemCode)
+		{
+			break;
+		}
+		else if (nCount == 9)
+		{
+			nCount = 0;
+
+			while (nCount <= 10)
+			{
+				if (m_nInventorySlot[nCount] == 0)
+				{
+					m_nInventorySlot[nCount] = ItemCode;
+					break;
+				}
+
+				nCount++;
+			}
+		}
+
+		if (m_nInventorySlot[nCount] != 0)
+		{
+			break;
+		}
+
+		nCount++;
+	}
+}
+
 void cInventory::InventoryUi()
 {
 	int nCount = 0;
@@ -34,30 +70,6 @@ void cInventory::InventoryUi()
 
 	system("cls");
 	cout << "{ 인벤토리 }" << endl;
-
-	while (nCount != 10)
-	{
-		if (m_nInventorySlot[nCount] == 0)
-		{
-			
-		}
-
-		nCount++;
-	}
-
-	/*
-	만약 인벤토리 10칸 안에 1이라는 숫자가 없으면 
-	맨 앞에 1을 추가하고 
-	만약 앞의 숫자가 0이 아니면 그 숫자의 다음 배열에 1을 넣는다
-	*/
-
-	if (m_nHealthPotion = !0)
-	{
-		while (m_nInventorySlot[nCount] == 0)
-		{
-			nCount++;
-		}
-	}
 
 	while (nCount != 10)
 	{

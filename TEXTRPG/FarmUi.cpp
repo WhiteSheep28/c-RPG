@@ -42,7 +42,13 @@ void cFarmUi::FarmUi(cMainSystem* Inventory)
 
 		pSystem->BreadSelect(Inventory);
 
-		if (Getm_nSelect() == 2)
+		if (Getm_nSelect() == 1)
+		{
+			Inventory->InputInventory(2, m_nBreadCost);
+
+			m_nBreadCost = 0;
+		}
+		else if (Getm_nSelect() == 2)
 		{
 			break;
 		}
