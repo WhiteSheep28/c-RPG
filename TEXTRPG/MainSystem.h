@@ -65,7 +65,7 @@ public:
 	
 	virtual void BreadSelect(cMainSystem* Inventory) { ; }
 
-	virtual void InventorySelect(cMainSystem* Character) { ; }
+	virtual void InventorySelect() { ; }
 
 	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
 	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
@@ -77,7 +77,7 @@ public:
 	virtual void InputInventory(int ItemCode, int ItemNum) { ; }
 	virtual void HealthPotionUi() { ; }
 	virtual void BreadUi() { ; }
-	virtual void HeadUi() { ; }
+	virtual void HeadUi() { ; } 
 
 	virtual void Setm_nBread() { ; }
 	virtual int Getm_nBread() { return m_nBread; }
@@ -93,7 +93,6 @@ protected:
 	int m_nHungry;
 	int m_nLevel;
 	int m_nCharacterNum;
-
 
 	static int m_nSelect;
 

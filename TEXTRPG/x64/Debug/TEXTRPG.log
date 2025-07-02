@@ -1,2 +1,9 @@
 ﻿  Inventory.cpp
-  TEXTRPG.vcxproj -> C:\Users\admin\Downloads\c-RPG-main\x64\Debug\TEXTRPG.exe
+  System.cpp
+C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\Inventory.cpp(135,3): error C2146: 구문 오류: ';'이(가) 'Getm_nSelect' 식별자 앞에 없습니다.
+C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\System.cpp(316,15): error C2084: 'void cSystem::InventorySelect(void)' 함수에 이미 본문이 있습니다.
+      C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\System.h(30,15):
+      'cSystem::InventorySelect'의 이전 정의를 참조하십시오.
+  
+  TestMonster.cpp
+  코드를 생성하고 있습니다...

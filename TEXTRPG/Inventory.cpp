@@ -9,7 +9,6 @@ using namespace std;
 
 cInventory::cInventory()
 {
-	m_nInventorySlot[10] = 0;
 	memset(m_nInventorySlot, 0 , 10 * sizeof(int));
 
 	m_nHeadCode = 0;
@@ -35,6 +34,19 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 	{
 		if (m_nInventorySlot[nCount] == ItemCode)
 		{
+			if (ItemCode == 1)
+			{
+				m_nHealthPotion += ItemNum;
+			}
+			else if (ItemCode == 2)
+			{
+				m_nBread += ItemNum;
+			}
+			else if (ItemCode == 3)
+			{
+				m_nHead += ItemNum;
+			}
+
 			break;
 		}
 		else if (nCount == 9)
@@ -46,6 +58,20 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 				if (m_nInventorySlot[nCount] == 0)
 				{
 					m_nInventorySlot[nCount] = ItemCode;
+
+					if (ItemCode == 1)
+					{
+						m_nHealthPotion += ItemNum;
+					}
+					else if (ItemCode == 2)
+					{
+						m_nBread += ItemNum;
+					}
+					else if (ItemCode == 3)
+					{
+						m_nHead += ItemNum;
+					}
+
 					break;
 				}
 
@@ -65,34 +91,49 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 void cInventory::InventoryUi()
 {
 	int nCount = 0;
+	int nNumCount = 1;
 
 	cMainSystem* pSystem = new cSystem;
 
-	system("cls");
-	cout << "{ 인벤토리 }" << endl;
-
-	while (nCount != 10)
+	while (1)
 	{
-		if (m_nInventorySlot[nCount] == 1)
-		{
-			HealthPotionUi();
-		}
-		else if (m_nInventorySlot[nCount] == 2)
-		{
-			BreadUi();
-		}
-		else if (m_nInventorySlot[nCount] == 3)
-		{
-			HeadUi();
-		}
-		else
-		{
-			
-		}
-		nCount++;
-	}
+		system("cls");
+		cout << "{ 인벤토리 }" << endl;
 
-	pSystem->SelectSystem();
+		while (nCount != 10)
+		{
+			cout << nNumCount << " : ";
+
+			if (m_nInventorySlot[nCount] == 1)
+			{
+				HealthPotionUi();
+			}
+			else if (m_nInventorySlot[nCount] == 2)
+			{
+				BreadUi();
+			}
+			else if (m_nInventorySlot[nCount] == 3)
+			{
+				HeadUi();
+			}
+			else
+			{
+
+			}
+
+			cout << endl;
+
+			nNumCount++;
+			nCount++;
+		}
+
+		pSystem->InventorySelect();
+		
+		m_nInventorySlot[Getm_nSelect()]
+
+
+		Getm_nSelect();
+	}
 }
 
 void cInventory::HealthPotionUi()

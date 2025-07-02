@@ -27,7 +27,7 @@ public:
 
 	virtual void BreadSelect(cMainSystem* Inventory);
 
-	virtual void InventorySelect(cMainSystem* Character) { ; }
+	virtual void InventorySelect() { ; }
 
 	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy);
 	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy);

@@ -38,6 +38,7 @@ void cFarmUi::FarmUi(cMainSystem* Inventory)
 		cout << m_nBreadCost << "개" << endl << endl;
 		cout << "{ 선택지 }" << endl;
 		cout << "1. 빵 받기" << endl;
+
 		cout << "2. 나가기" << endl;
 
 		pSystem->BreadSelect(Inventory);
