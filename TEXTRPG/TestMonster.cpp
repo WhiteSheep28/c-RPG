@@ -10,6 +10,7 @@ cTestMonster::cTestMonster()
 	m_nHealth = 10000000;
 	m_nAttack = 10;
 	m_nLevel = 1000;
+	m_nMonsterNum = 0;
 }
 
 cTestMonster::~cTestMonster()

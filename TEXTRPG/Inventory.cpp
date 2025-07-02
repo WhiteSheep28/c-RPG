@@ -11,11 +11,9 @@ cInventory::cInventory()
 {
 	memset(m_nInventorySlot, 0 , 10 * sizeof(int));
 
-	m_nHeadCode = 0;
 	m_nHealthPotionCode = 1;
 	m_nBreadCode = 2;
 
-	m_nHead = 0;
 	m_nHealthPotion = 0;
 	m_nBread = 0;
 }
@@ -42,10 +40,6 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 			{
 				m_nBread += ItemNum;
 			}
-			else if (ItemCode == 3)
-			{
-				m_nHead += ItemNum;
-			}
 
 			break;
 		}
@@ -67,10 +61,6 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 					{
 						m_nBread += ItemNum;
 					}
-					else if (ItemCode == 3)
-					{
-						m_nHead += ItemNum;
-					}
 
 					break;
 				}
@@ -88,10 +78,10 @@ void cInventory::InputInventory(int ItemCode,int ItemNum)
 	}
 }
 
-void cInventory::InventoryUi()
+void cInventory::InventoryUi(cMainSystem* Character)
 {
 	int nCount = 0;
-	int nNumCount = 1;
+	int nNumCount = 0;
 
 	cMainSystem* pSystem = new cSystem;
 
@@ -100,7 +90,7 @@ void cInventory::InventoryUi()
 		system("cls");
 		cout << "{ 인벤토리 }" << endl;
 
-		while (nCount != 10)
+		while (nCount != 9)
 		{
 			cout << nNumCount << " : ";
 
@@ -114,7 +104,7 @@ void cInventory::InventoryUi()
 			}
 			else if (m_nInventorySlot[nCount] == 3)
 			{
-				HeadUi();
+
 			}
 			else
 			{
@@ -126,29 +116,44 @@ void cInventory::InventoryUi()
 			nNumCount++;
 			nCount++;
 		}
+		cout << "9 : 나가기" << endl;
+
+		nCount = 0;
+		nNumCount = 0;
 
 		pSystem->InventorySelect();
 		
-		m_nInventorySlot[Getm_nSelect()]
+		int m_nSelectNum = Getm_nSelect();
 
-
-		Getm_nSelect();
+		if (m_nInventorySlot[m_nSelectNum] == 1)
+		{
+			m_nHealthPotion--;
+			HealthPotion(Character);
+		}
+		else if (m_nInventorySlot[m_nSelectNum] == 2)
+		{
+			m_nBread--;
+			Bread(Character);
+		}
+		else if (m_nSelectNum == 9)
+		{
+			break;
+		}
+		else
+		{
+			continue;
+		}
 	}
 }
 
 void cInventory::HealthPotionUi()
 {
-	cout << "회복물약 : " << m_nHealthPotion << "개" << endl;
+	cout << "회복물약 " << m_nHealthPotion << "개";
 }
 
 void cInventory::BreadUi()
 {
-	cout << "빵 : " << m_nBread << "개" << endl;
-}
-
-void cInventory::HeadUi()
-{
-	cout << "강채원 머리 : " << m_nHead << "개" << endl;
+	cout << "빵 " << m_nBread << "개";
 }
 
 void cInventory::Setm_nBread()
@@ -160,4 +165,14 @@ void cInventory::Setm_nBreadCost()
 {
 	m_nBread = m_nBreadCost;
 	m_nBreadCost = 0;
+}
+
+void cInventory::Bread(cMainSystem* Character)
+{
+	Character->SetPlusm_nHungry();
+}
+
+void cInventory::HealthPotion(cMainSystem* Character)
+{
+	Character->SetPlusm_nHealth();
 }

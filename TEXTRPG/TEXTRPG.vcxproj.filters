@@ -63,6 +63,15 @@
     <ClCompile Include="FarmUi.cpp">
       <Filter>소스 파일\Ui</Filter>
     </ClCompile>
+    <ClCompile Include="Goblin.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Wolf.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Slime.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainSystem.h">
@@ -96,6 +105,15 @@
       <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TestMonster.h">
+      <Filter>소스 파일\헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Goblin.h">
+      <Filter>소스 파일\헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="wolf.h">
+      <Filter>소스 파일\헤더 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="slime.h">
       <Filter>소스 파일\헤더 파일\Character</Filter>
     </ClInclude>
   </ItemGroup>

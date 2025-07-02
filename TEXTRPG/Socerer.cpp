@@ -22,7 +22,7 @@ cSocerer::~cSocerer()
 
 }
 
-void cSocerer::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
+void cSocerer::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
 	cMainSystem* pSystem = new cSystem;
 
@@ -31,12 +31,23 @@ void cSocerer::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	cout << "2. ¾óÀ½ ÆøÇ³" << endl;
 	cout << "3. È­¿° ±âµÕ" << endl;
 	cout << "4. ¿î¼® ³«ÇÏ" << endl;
-	cout << "5. ³ª°¡±â" << endl;
+	cout << "5. ÀÎº¥Åä¸®" << endl;
+	cout << "6. ³ª°¡±â" << endl;
 
-	pSystem->SocererSkillSelect(Character, Enemy);
+	pSystem->SocererSkillSelect(Character, Enemy, Inventory);
 }
 
 void cSocerer::Setm_nHungry(cMainSystem* Character)
 {
 	m_nHungry -= 10;
+}
+
+void cSocerer::SetPlusm_nHungry()
+{
+	m_nHungry += 50;
+}
+
+void cSocerer::SetPlusm_nHealth()
+{
+	m_nHealth += 40;
 }

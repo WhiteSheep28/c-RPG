@@ -21,7 +21,7 @@ cArcher::~cArcher()
 	
 }
 
-void cArcher::ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy)
+void cArcher::ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
 	cMainSystem* pSystem = new cSystem;
 
@@ -30,12 +30,23 @@ void cArcher::ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy)
 	cout << "2. 약점 포착" << endl;
 	cout << "3. 은신" << endl;
 	cout << "4. 헤드 샷" << endl;
-	cout << "5. 나가기" << endl;
+	cout << "5. 인벤토리" << endl;
+	cout << "6. 나가기" << endl;
 
-	pSystem->ArcherSkillSelect(Character, Enemy);
+	pSystem->ArcherSkillSelect(Character, Enemy, Inventory);
 }
 
 void cArcher::Setm_nHungry(cMainSystem* Character)
 {
 	m_nHungry -= 10;
+}
+
+void cArcher::SetPlusm_nHungry()
+{
+	m_nHungry += 50;
+}
+
+void cArcher::SetPlusm_nHealth()
+{
+	m_nHealth += 40;
 }

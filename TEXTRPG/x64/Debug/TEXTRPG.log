@@ -1,9 +1,21 @@
-﻿  Inventory.cpp
+﻿  Archer.cpp
+  Character.cpp
+  DungeonUi.cpp
+  FarmUi.cpp
+  Goblin.cpp
+  Inventory.cpp
+  main.cpp
+C:\Users\admin\Downloads\c-RPG-main\TEXTRPG\main.cpp(15,14): warning C4356: 'cMainSystem::m_nSelect': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+C:\Users\admin\Downloads\c-RPG-main\TEXTRPG\main.cpp(16,14): warning C4356: 'cMainSystem::m_nBreadCount': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+C:\Users\admin\Downloads\c-RPG-main\TEXTRPG\main.cpp(17,14): warning C4356: 'cMainSystem::m_nBreadCost': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+C:\Users\admin\Downloads\c-RPG-main\TEXTRPG\main.cpp(19,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MainSystem.cpp
+  Slime.cpp
+  Socerer.cpp
   System.cpp
-C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\Inventory.cpp(135,3): error C2146: 구문 오류: ';'이(가) 'Getm_nSelect' 식별자 앞에 없습니다.
-C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\System.cpp(316,15): error C2084: 'void cSystem::InventorySelect(void)' 함수에 이미 본문이 있습니다.
-      C:\Users\white\Downloads\c-RPG-main\c-RPG-main\TEXTRPG\System.h(30,15):
-      'cSystem::InventorySelect'의 이전 정의를 참조하십시오.
-  
   TestMonster.cpp
+  Ui.cpp
+  Warrior.cpp
+  Wolf.cpp
   코드를 생성하고 있습니다...
+  TEXTRPG.vcxproj -> C:\Users\admin\Downloads\c-RPG-main\x64\Debug\TEXTRPG.exe

@@ -21,7 +21,7 @@ cWarrior::~cWarrior()
 
 }
 
-void cWarrior::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
+void cWarrior::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
 	cMainSystem* pSystem = new cSystem;
 
@@ -30,12 +30,24 @@ void cWarrior::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	cout << "2. 아이언 바디" << endl;
 	cout << "3. 콤보 어택" << endl;
 	cout << "4. 그라운드 스매시" << endl;
-	cout << "5. 나가기" << endl;
+	cout << "5. 인벤토리" << endl;
+	cout << "6. 나가기" << endl;
 
-	pSystem->WarriorSkillSelect(Character, Enemy);
+	pSystem->WarriorSkillSelect(Character, Enemy, Inventory);
 }
 
 void cWarrior::Setm_nHungry(cMainSystem* Character)
 {
 	m_nHungry -= 10;
+}
+
+void cWarrior::SetPlusm_nHungry()
+{
+	m_nHungry += 50;
+	
+}
+
+void cWarrior::SetPlusm_nHealth()
+{
+	m_nHealth += 40;
 }

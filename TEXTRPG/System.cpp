@@ -117,6 +117,7 @@ void cSystem::ArcherIntroduceSelect()
 
 void cSystem::MainSystemSelect(cMainSystem* Character, cMainSystem* Inventory)
 {
+	cMainSystem* pInventory = new cInventory;
 	cSystem::SelectSystem();
 
 	switch (Getm_nSelect())
@@ -140,7 +141,7 @@ void cSystem::MainSystemSelect(cMainSystem* Character, cMainSystem* Inventory)
 	}
 	case 3: 
 	{
-		Inventory->InventoryUi();
+		Inventory->InventoryUi(Character);
 		break;
 	}
 	case 4:
@@ -151,8 +152,9 @@ void cSystem::MainSystemSelect(cMainSystem* Character, cMainSystem* Inventory)
 	}
 }
 
-void cSystem::ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
+void cSystem::ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
+	cMainSystem* pInventory = new cInventory;
 	cSystem::SelectSystem();
 	int nTempEnemyHealth = Enemy->Getm_nHealth();
 	int nEnemyHealth = Enemy->Getm_nHealth();
@@ -186,6 +188,11 @@ void cSystem::ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	}
 	case 5:
 	{
+		Inventory->InventoryUi(Character);
+		break;
+	}
+	case 6:
+	{
 		break;
 	}
 	default:
@@ -201,8 +208,9 @@ void cSystem::ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	}
 }
 
-void cSystem::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
+void cSystem::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
+	cMainSystem* pInventory = new cInventory;
 	cSystem::SelectSystem();
 	int nTempEnemyHealth = Enemy->Getm_nHealth();
 	int nEnemyHealth = Enemy->Getm_nHealth();
@@ -236,6 +244,11 @@ void cSystem::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	}
 	case 5:
 	{
+		Inventory->InventoryUi(Character);
+		break;
+	}
+	case 6:
+	{
 		break;
 	}
 	default:
@@ -251,8 +264,9 @@ void cSystem::WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 	}
 }
 
-void cSystem::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
+void cSystem::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory)
 {
+	cMainSystem* pInventory = new cInventory;
 	cSystem::SelectSystem();
 	int nTempEnemyHealth = Enemy->Getm_nHealth();
 	int nEnemyHealth = Enemy->Getm_nHealth();
@@ -285,6 +299,11 @@ void cSystem::SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy)
 		break;
 	}
 	case 5:
+	{
+		Inventory->InventoryUi(Character);
+		break;
+	}
+	case 6:
 	{
 		break;
 	}

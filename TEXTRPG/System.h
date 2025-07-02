@@ -27,11 +27,11 @@ public:
 
 	virtual void BreadSelect(cMainSystem* Inventory);
 
-	virtual void InventorySelect() { ; }
+	virtual void InventorySelect();
 
-	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy);
-	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy);
-	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy);
+	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory);
+	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory);
+	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory);
 
 protected:
 

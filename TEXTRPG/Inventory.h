@@ -12,11 +12,12 @@ public:
 	cInventory();
 	~cInventory();
 
-	virtual void InventoryUi();
+	virtual void InventoryUi(cMainSystem* Character);
 	virtual void InputInventory(int ItemCode, int ItemNum);
 	virtual void HealthPotionUi();
 	virtual void BreadUi();
-	virtual void HeadUi();
+	virtual void Bread(cMainSystem* Character);
+	virtual void HealthPotion(cMainSystem* Character);
 
 	virtual void Setm_nBread();
 	virtual int Getm_nBread() { return m_nBread; }

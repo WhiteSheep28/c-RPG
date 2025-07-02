@@ -27,6 +27,7 @@ public:
 
 	//DungeonUi.h
 	virtual void TestDungeonUi(cMainSystem* Character, cMainSystem* Inventory) { ; }
+	virtual void DungeonUi(cMainSystem* Character, cMainSystem* Inventory, cMainSystem* Monster) { ; }
 
 
 	//FarmUi.h
@@ -34,7 +35,7 @@ public:
 
 
 	//Character.h
-	virtual void ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy) { ; }
+	virtual void ArcherSkillTree(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory) { ; }
 
 	string Getm_sName() { return m_sName; }
 
@@ -45,9 +46,11 @@ public:
 
 	int Getm_nHungry() { return m_nHungry; }
 	virtual void Setm_nHungry(cMainSystem* Character) { ; }
-
+	virtual void SetPlusm_nHungry() { ; }
+	virtual void SetPlusm_nHealth() { ; }
 	int Getm_nLevel() { return m_nLevel; }
 	int Getm_nCharacterNum() { return m_nCharacterNum; }
+	int Getm_nMonsterNum() { return m_nMonsterNum; }
 
 
 	//System.h
@@ -59,7 +62,7 @@ public:
 
 	virtual void WarriorIntroduceSelect() { ; } //캐릭터 소개
 	virtual void SocererIntroduceSelect() { ; }
-	virtual void ArcherIntroduceSelect() { ; } 
+	virtual void ArcherIntroduceSelect() { ; }
 
 	virtual void MainSystemSelect(cMainSystem* Character, cMainSystem* Inventory) { ; } //최초 게임 시작
 	
@@ -67,22 +70,26 @@ public:
 
 	virtual void InventorySelect() { ; }
 
-	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
-	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
-	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy) { ; }
+	virtual void ArcherSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory) { ; }
+	virtual void WarriorSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory) { ; }
+	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory) { ; }
 
 	
 	//Inventory.h
-	virtual void InventoryUi() { ; }
+	virtual void InventoryUi(cMainSystem* Character) { ; }
 	virtual void InputInventory(int ItemCode, int ItemNum) { ; }
 	virtual void HealthPotionUi() { ; }
 	virtual void BreadUi() { ; }
 	virtual void HeadUi() { ; } 
+	virtual void Bread(cMainSystem* Character) { ; }
+	virtual void HealthPotion(cMainSystem* Character) { ; }
 
 	virtual void Setm_nBread() { ; }
 	virtual int Getm_nBread() { return m_nBread; }
 
 	virtual void Setm_nBreadCost() { ; }
+
+	virtual void Setm_nHungry() { ; }
 
 	int Getm_nSelect() { return m_nSelect; }
 
@@ -93,6 +100,7 @@ protected:
 	int m_nHungry;
 	int m_nLevel;
 	int m_nCharacterNum;
+	int m_nMonsterNum;
 
 	static int m_nSelect;
 
@@ -103,11 +111,9 @@ protected:
 
 	int m_nHealthPotionCode;
 	int m_nBreadCode;
-	int m_nHeadCode;
 
 	int m_nHealthPotion;
 	int m_nBread;
-	int m_nHead;
 
 	int m_nGetItemCode;
 

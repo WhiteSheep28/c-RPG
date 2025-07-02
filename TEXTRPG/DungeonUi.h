@@ -14,6 +14,7 @@ public:
 	virtual ~cDungeonUi();
 
 	virtual void TestDungeonUi(cMainSystem* Character, cMainSystem* Inventory);
+	virtual void DungeonUi(cMainSystem* Character, cMainSystem* Inventory, cMainSystem* Monster);
 
 protected:
 

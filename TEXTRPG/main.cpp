@@ -21,5 +21,7 @@ void main()
 	cMainSystem* pUi = new cUi;
 
 	pUi->StartUi();
+
+	delete pUi;
 }
 

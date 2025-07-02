@@ -12,9 +12,13 @@ public:
 	cSocerer();
 	virtual ~cSocerer();
 
-	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy);
+	virtual void SocererSkillSelect(cMainSystem* Character, cMainSystem* Enemy, cMainSystem* Inventory);
 
 	virtual void Setm_nHungry(cMainSystem* Hungry);
+
+	virtual void SetPlusm_nHungry();
+
+	virtual void SetPlusm_nHealth();
 
 protected:
 
